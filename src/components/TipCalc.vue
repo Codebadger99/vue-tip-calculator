@@ -7,35 +7,36 @@
 	    	<div class="component-1">
 	    		<div class="bill-input">
 	    			<h3>bill</h3>
-	    			<input type="number" name="amount" class="bill"  placeholder="0">
+	    			<input type="text" name="amount" class="bill"  placeholder="0" v-model="amount">
 	    		</div>
 
 	    		<div class="select-tip">
 	    			<h3>select tip %</h3>
 	    			<div class="tip-card">
-	    		<button class="card-tip">
+	    				
+	    		<button class="card-tip" @click="handleClick(5)" :class="{active: activeBtn}">
 	    			5$
 	    		</button>
-	    		<button class="card-tip">
+	    		<button class="card-tip"  @click="handleClick(10)" :class="{active: activeBtn}">
 	    			10$
 	    		</button>
-	    		<button class="card-tip">
+	    		<button class="card-tip"  @click="handleClick(15)" :class="{active: activeBtn}">
 	    			15$
 	    		</button>
-	    		<button class="card-tip">
+	    		<button class="card-tip"  @click="handleClick(25)" :class="{active: activeBtn}">
 	    			25$
 	    		</button>
-	    		<button class="card-tip">
+	    		<button class="card-tip"  @click="handleClick(50)" :class="{active: activeBtn}">
 	    			50$
 	    		</button>
-	    		<input type="number" class="card-tip card-tip-input" placeholder="custom">
+	    		<input type="text" class="card-tip card-tip-input" placeholder="custom" v-model="input">
 	    			</div>
               
 
 	    		</div>
 	    		<div class="people">
 	    		<h4>number of people</h4>
-	    		<input type="number" name="people" class="people2" placeholder="0">
+	    		<input type="text" name="people" class="people2" placeholder="0" v-model="people">
 	    	</div>
 
 	    	</div>
@@ -79,11 +80,25 @@
 </template>
 
 <script>
+import { ref, computed } from 'vue'
 export default {
 
   name: 'TipCalc',
  setup(){
- 	
+ 	const amount = ref('')
+  const tips = ref([50, 10, 15, 20, 50])
+  const input = ref('')
+  const people = ref('')
+  const activeBtn = ref(false)
+ 
+  const handleClick = (num) => {
+  	if(num){
+  		!activeBtn.value
+  	} 
+  	input.value = num
+  }
+
+ 	return { handleClick, input, amount, people, activeBtn }
  }
 }
 </script>
