@@ -1,15 +1,14 @@
 <template>
-  <TipCalc/>
+  <TipCalc />
 </template>
 
 <script>
-import TipCalc from './components/TipCalc.vue'
+import TipCalc from "./components/TipCalc.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-   TipCalc
-  }
-}
+    TipCalc,
+  },
+};
 </script>
-

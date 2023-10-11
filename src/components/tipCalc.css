@@ -1,32 +1,32 @@
-.container{
-	display: flex;
-     flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	gap: 2rem;
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
 }
 
-.container2{
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: center;
-	gap: 2rem;
+.container2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
 }
 
-.card{
-	background-color: hsl(0, 0%, 100%);
-	padding: 2rem 2rem;
-	border-radius: 2rem;
+.card {
+  background-color: hsl(0, 0%, 100%);
+  padding: 2rem 2rem;
+  border-radius: 2rem;
 }
 
-input{
-	background-color:hsl(185, 41%, 84%);
+input {
+  background-color: hsl(185, 41%, 84%);
 }
 
-.component-1{
-	display: grid;
-	grid-gap: 1rem;
+.component-1 {
+  display: grid;
+  grid-gap: 1rem;
 }
 
 /*input[type=number]::-webkit-outer-spin-button,
@@ -38,198 +38,212 @@ input[type=number]{
 	-moz-apperance: textfield;
 }*/
 
-input[type=text]{
-	text-align: right;
+input[type="text"] {
+  text-align: right;
 }
 
-
-.bill{
-	padding: .7rem .4rem;
-	border: none;
-	outline: none;
-	border-radius: .2rem;
-	font-size: 24px;
-	 margin-top: .3rem;
+.bill {
+  padding: 0.7rem 0.4rem;
+  border: none;
+  outline: none;
+  border-radius: 0.2rem;
+  font-size: 24px;
+  margin-top: 0.3rem;
 }
 
-.bill:focus{
-	border: 2px solid hsl(172, 67%, 45%);
+.bill:focus {
+  border: 2px solid hsl(172, 67%, 45%);
 }
 
-
-.tip-card{
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-gap: 1rem;
+.tip-card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
 }
 
-.card-tip{
-	background-color: hsl(183, 100%, 15%);
-	padding: .5rem .8rem;
-	text-align: center;
-	color: hsl(0, 0%, 100%);
-	border-radius: .3rem;
-	width: 5rem;
-     border: none;
-	outline: none; 
-	font-size: 22px;  
-	cursor: pointer;
+.card-tip {
+  background-color: hsl(183, 100%, 15%);
+  padding: 0.5rem 0.8rem;
+  text-align: center;
+  color: hsl(0, 0%, 100%);
+  border-radius: 0.3rem;
+  width: 5rem;
+  border: none;
+  outline: none;
+  font-size: 22px;
+  cursor: pointer;
 }
 
-.card-tip-input{
-	border: none;
-	outline: none;
-	cursor: auto;	
+.card-tip-input {
+  border: none;
+  outline: none;
+  cursor: auto;
+  background-color: hsl(185, 41%, 84%);
+  color: hsl(186, 14%, 43%);
 }
 
-.card-tip-input::placeholder{
-	text-align: center;
-	font-size: 1rem;
-	text-transform: capitalize;
-   	color: hsl(0, 0%, 100%);
-   	margin-right: -.2rem;
+.card-tip-input::placeholder {
+  text-align: center;
+  font-size: 1rem;
+  text-transform: capitalize;
+  color: hsl(0, 0%, 100%);
+  margin-right: -0.2rem;
 }
 
-.people2{
-		padding: .7rem .4rem;
-	border: none;
-	outline: none;
-	border-radius: .2rem;
-	font-size: 24px;
-	margin-top: 1rem;
+.people2 {
+  padding: 0.7rem 0.4rem;
+  border: none;
+  outline: none;
+  border-radius: 0.2rem;
+  font-size: 24px;
+  margin-top: 1rem;
 }
 
-.button{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin-top: 1rem;
-
+.people2:focus {
+  border: 2px solid hsl(172, 67%, 45%);
 }
 
-.reset{
-	padding: .7rem 7rem;
-	border-radius: .3rem;
-	border: none;
-	outline: none;
-	background-color:  hsl(184, 14%, 56%);
-	color: hsl(186, 14%, 43%);
-	
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
 }
 
-.amountCard{
-	background-color: hsl(183, 100%, 15%);
-	padding: 3rem;
-	border-radius: 1rem;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	gap: 2rem;
+.reset {
+  padding: 0.7rem 7rem;
+  border-radius: 0.3rem;
+  border: none;
+  outline: none;
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+  cursor: pointer;
 }
 
-.TipAmount > h3, .TipTotal > h3{
- color: hsl(0, 0%, 100%);
+.amountCard {
+  background-color: hsl(183, 100%, 15%);
+  padding: 3rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
 }
 
-.TipAmount{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: row;
-	gap: 4rem;
+.TipAmount > h3,
+.TipTotal > h3 {
+  color: hsl(0, 0%, 100%);
+}
+
+.TipAmount {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 4rem;
 }
 
 .TipTotal {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: row;
-	gap: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 4rem;
 }
 
-h1{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	font-size: 3rem;
-	color: hsl(172, 67%, 45%);
+h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: hsl(172, 67%, 45%);
 }
 
-.img{
-	width: 1rem;
+.img {
+  width: 1rem;
 }
 
-.tip-card{
-		
-		margin-top: 1em;
-	}
-
-.active{
-	background-color: white;
+.tip-card {
+  margin-top: 1em;
 }
 
-
-@media screen and (max-width: 768px){
-	.container2{
-		flex-direction: column;
-	}
+.reset[disabled] {
+  background-color: hsl(184, 14%, 56%);
+  color: hsl(183, 100%, 15%);
 }
 
-@media screen and (max-width: 414px){
-	.card{
-		padding: 2rem .2rem;
-	}
-
+.flex {
+  display: flex;
+  gap: 2rem;
+  margin-top: 0.8rem;
 }
 
-@media screen and (max-width: 412px){
-	.card{
-		padding: 2rem .5rem;
-	}
-
+h5 {
+  color: red;
 }
 
-@media screen and (max-width: 360px){
-	.card{
-		padding: 2rem .7rem;
-	}
-
-	.amountCard{
-		padding: 2rem;
-	}
+.formError {
+  border: 2px solid red;
 }
 
-@media screen and (max-width: 320px){
-	.bill-input{
-		margin-left: .8rem;
-	}
-
-	.bill{
-        margin-top: .3rem;
-		width: 18rem;
-	}
-
-	.select-tip > h3{
-		margin-left: 1rem;
-	}
-
-	.tip-card{
-		margin-left: 1rem;
-		margin-top: 1em;
-	}
-
-	.people2{
-        margin-top: .3rem;
-		width: 18rem;
-	}
-
-.card{
-		padding: 2rem .2rem;
-	}
-
-	.amountCard{
-		padding: .6rem;
-	}
+@media screen and (max-width: 768px) {
+  .container2 {
+    flex-direction: column;
+  }
 }
 
+@media screen and (max-width: 414px) {
+  .card {
+    padding: 2rem 0.2rem;
+  }
+}
+
+@media screen and (max-width: 412px) {
+  .card {
+    padding: 2rem 0.5rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .card {
+    padding: 2rem 0.7rem;
+  }
+
+  .amountCard {
+    padding: 2rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .bill-input {
+    margin-left: 0.8rem;
+  }
+
+  .bill {
+    margin-top: 0.3rem;
+    width: 18rem;
+  }
+
+  .select-tip > h3 {
+    margin-left: 1rem;
+  }
+
+  .tip-card {
+    margin-left: 1rem;
+    margin-top: 1em;
+  }
+
+  .people2 {
+    margin-top: 0.3rem;
+    width: 18rem;
+  }
+
+  .card {
+    padding: 2rem 0.2rem;
+  }
+
+  .amountCard {
+    padding: 0.6rem;
+  }
+}
