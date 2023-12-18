@@ -29,14 +29,14 @@ input {
   grid-gap: 1rem;
 }
 
-/*input[type=number]::-webkit-outer-spin-button,
-input[type=number]::-webkit-inner-spin-button{
+.card-tip[type=number]::-webkit-outer-spin-button,
+.card-tip[type=number]::-webkit-inner-spin-button{
 	display: none;
 }
 
-input[type=number]{
+.card-tip[type=number]{
 	-moz-apperance: textfield;
-}*/
+}
 
 input[type="text"] {
   text-align: right;
@@ -186,6 +186,12 @@ h5 {
 .formError {
   border: 2px solid red;
 }
+
+.cl{
+  background-color: hsl(172, 67%, 45%);
+}
+
+/*  */
 
 @media screen and (max-width: 768px) {
   .container2 {

@@ -19,17 +19,23 @@
           <div class="select-tip">
             <h3>select tip %</h3>
             <div class="tip-card" ref="tipBtn">
-              <div v-for="tip in tips" :key="tip">
-                <button class="card-tip" @click="handleClick(tip)">
-                  {{ tip }}$
+              <div v-for="tip in tips" :key="tip.id">
+                <button
+                  class="card-tip"
+                  @click="handleClick(tip)"
+                  :class="{ cl: tip.isColoured }"
+                  ref="btn"
+                >
+                  {{ tip.tip }}$
                 </button>
               </div>
 
               <input
-                type="text"
+                type="number"
                 class="card-tip card-tip-input"
                 placeholder="custom"
                 v-model="input"
+                ref="input"
               />
             </div>
           </div>
@@ -99,36 +105,78 @@ export default {
       amount: "",
       people: "",
       input: "",
-      tips: [5, 10, 15, 25, 50],
+      tips: [
+        {
+          id: 1,
+          tip: 5,
+          isColoured: false,
+        },
+        {
+          id: 2,
+          tip: 10,
+          isColoured: false,
+        },
+        {
+          id: 3,
+          tip: 15,
+          isColoured: false,
+        },
+        {
+          id: 4,
+          tip: 25,
+          isColoured: false,
+        },
+        {
+          id: 5,
+          tip: 50,
+          isColoured: false,
+        },
+      ],
       tipAmount: "0.00",
       totalAmount: "0.00",
       tip: 0,
       peopleError: false,
+      tipPercentage: 0,
+      totalamount: 0,
+      btnValue: 0,
     };
   },
   methods: {
-    handleClick(num) {
-      if (this.tip === num) {
-        this.tip = 0;
+    handleClick(tip) {
+      this.btnValue = tip.tip;
+
+      if ((tip.isColoured = !tip.isColoured)) {
+        this.$refs.input.disabled = true;
       } else {
-        this.tip = num;
-        this.input = "";
+        this.$refs.input.disabled = false;
       }
     },
     submit() {
       if (this.people.length === 0) {
         this.peopleError = true;
       }
-
-      this.tipAmount = this.tip / this.people || this.input / this.people;
-      this.totalAmount = this.amount / this.people;
+      if (this.btnValue) {
+        this.tipPercentage = this.btnValue / 100;
+        this.tip = this.amount * this.tipPercentage;
+        this.totalamount = parseInt(this.amount) + this.tip;
+        this.tipAmount = (this.tip / this.people).toFixed(2);
+        this.totalAmount = this.totalamount / this.people;
+      } else {
+        this.tipPercentage = this.input / 100;
+        this.tip = this.amount * this.tipPercentage;
+        this.totalamount = parseInt(this.amount) + this.tip;
+        this.tipAmount = (this.tip / this.people).toFixed(2);
+        this.totalAmount = this.totalamount / this.people;
+      }
     },
 
     resetBtn() {
-      (this.tipAmount = "0.00"), (this.totalAmount = "0.00");
+      this.tipAmount = "0.00";
+      this.totalAmount = "0.00";
       this.amount = "";
       this.people = "";
       this.tip = 0;
+      this.input = "";
     },
   },
 };
